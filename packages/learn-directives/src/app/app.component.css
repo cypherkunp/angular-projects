@@ -1,0 +1,19 @@
+li {
+  list-style-type: none;
+  margin-top: -1px;
+  border: 1px solid grey;
+  width: 100px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.odd {
+  background-color: aqua;
+}
+
+.even {
+  background-color: pink;
+}

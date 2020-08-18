@@ -1,0 +1,15 @@
+<main>
+  <h1>Numbers</h1>
+  <hr />
+  <button (click)="showOddNumbers()">Show Odd Numbers</button>
+  <button (click)="showEvenNumbers()">Show Even Numbers</button>
+  <button (click)="showAllNumbers()">Show All Numbers</button>
+
+  <ul>
+    <li *ngFor="let number of numbers" [ngClass]="{ odd: isOdd(number), even: !isOdd(number) }">
+      {{ number }}
+    </li>
+  </ul>
+  <p appBasicHighlight>Styled via Basic Highlight Directive</p>
+  <p appBetterHighlight>Styled via Better Highlight Directive</p>
+</main>
