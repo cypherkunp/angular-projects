@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BasicHighlightDirective } from './directives/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
 import { AnotherHighlightDirective } from './directives/another-highlight/another-highlight.directive';
+import { ConfigurableHighlightDirective } from './directives/configurable-highlight/configurable-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { AnotherHighlightDirective } from './directives/another-highlight/anothe
     BasicHighlightDirective,
     BetterHighlightDirective,
     AnotherHighlightDirective,
+    ConfigurableHighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

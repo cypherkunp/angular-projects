@@ -4,7 +4,7 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
   selector: '[appAnotherHighlight]',
 })
 export class AnotherHighlightDirective {
-  @HostBinding('style.backgroundColor') backgroundColor: string;
+  @HostBinding('style.backgroundColor') backgroundColor = 'transparent';
 
   @HostListener('mouseenter') mouseOver(eventData: Event): void {
     this.backgroundColor = 'lightPink';
