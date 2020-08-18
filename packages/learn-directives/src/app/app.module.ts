@@ -7,6 +7,7 @@ import { BasicHighlightDirective } from './directives/basic-highlight.directive'
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
 import { AnotherHighlightDirective } from './directives/another-highlight/another-highlight.directive';
 import { ConfigurableHighlightDirective } from './directives/configurable-highlight/configurable-highlight.directive';
+import { NgFalseDirective } from './directives/ng-false/ng-false.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ConfigurableHighlightDirective } from './directives/configurable-highli
     BetterHighlightDirective,
     AnotherHighlightDirective,
     ConfigurableHighlightDirective,
+    NgFalseDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

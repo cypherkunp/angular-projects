@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  inputValue = '10';
+
   title = 'learn-directives';
   allNumbers = [1, 2, 3, 4, 5, 6];
   numbers = this.allNumbers;
@@ -24,5 +26,9 @@ export class AppComponent {
 
   showAllNumbers(): void {
     this.numbers = this.allNumbers;
+  }
+
+  onKeyUp(value: string): void {
+    this.inputValue = value;
   }
 }
