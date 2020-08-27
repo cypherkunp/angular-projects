@@ -13,6 +13,7 @@ export class AuthService {
 
   login(): void {
     this.loggedIn = true;
+    console.log('Login Success!');
   }
 
   logout(): void {
