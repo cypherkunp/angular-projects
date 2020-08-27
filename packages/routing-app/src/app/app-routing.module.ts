@@ -1,3 +1,5 @@
+import { ServerResolver } from './servers/server/server-resolver.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -24,7 +26,7 @@ const appRoutes: Routes = [
     canActivateChild: [AuthGuard],
     component: ServersComponent,
     children: [
-      { path: ':id', component: ServerComponent },
+      { path: ':id', component: ServerComponent, resolve: { server: ServerResolver } },
       { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard] },
     ],
   },
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
     path: 'not-found',
     component: PageNotFoundComponent,
   },
+  { path: 'error', component: ErrorPageComponent, data: { message: 'Some error occurred!' } },
   {
     path: '**',
     redirectTo: 'not-found',
@@ -39,7 +42,9 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  //imports: [RouterModule.forRoot(appRoutes, { useHash: true })],
+
+  imports: [RouterModule.forRoot(appRoutes, { useHash: false })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
